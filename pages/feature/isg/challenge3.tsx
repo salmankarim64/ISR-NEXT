@@ -17,8 +17,17 @@ export default function challenge2({ time }: any) {
         <NavigationButton Path="/" ButtonText={"Home"} corner={"TL"} />
         <main className={styles.main}>
           <h1 className={styles.title}>Challenge 3</h1>
+
+          <h1>Current Time: {time}</h1>
           <h3>On Demand ISR</h3>
-          <button> Get Time</button>
+          <button
+            onClick={() => {
+              fetch("/api/revalidate");
+            }}
+          >
+            {" "}
+            Get Time
+          </button>
         </main>
 
         <NavigationButton
