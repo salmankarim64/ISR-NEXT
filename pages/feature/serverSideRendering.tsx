@@ -9,7 +9,8 @@ const StaticGeneration: NextPage = () => {
       <main className={styles.main}>
         <HomeButton />
         <h1 className={styles.title}>Server Side Generation</h1>
-
+        <h3> Under Construction</h3>
+        <h4> Come back and another day</h4>
         <div className={styles.grid}></div>
       </main>
     </div>
