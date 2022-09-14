@@ -32,6 +32,9 @@ const Home: NextPage = () => {
             </a>
           </Link>
         </div>
+        <Link href={"https://github.com/salmankarim64/ISR-NEXT"}>
+          <h5> Github Repo</h5>
+        </Link>
       </main>
     </div>
   );
