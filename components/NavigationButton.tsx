@@ -26,11 +26,14 @@ export default function HomeButton(Props: NavigationInterface) {
         right: `${RIGHT}`,
         bottom: `${BOTTOM}`,
         fontSize: "15px",
-        width: "100px",
+        width: "57px",
         height: "30px",
+        margin: "10px",
       }}
     >
-      <Link href={Path}>{ButtonText}</Link>
+      <Link href={Path}>
+        <button>{ButtonText}</button>
+      </Link>
     </div>
   );
 }

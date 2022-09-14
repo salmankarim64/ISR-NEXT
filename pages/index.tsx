@@ -18,10 +18,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Feature comparison</h1>
+        <h1 className={styles.title}>Exploring Next Features</h1>
 
         <div className={styles.grid}>
-          <Link href="feature/staticGeneration">
+          <Link href="/feature/isg/challenge1">
             <a className={styles.card}>
               <h2>Static Generation </h2>
             </a>
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
           </Link>
         </div>
         <Link href={"https://github.com/salmankarim64/ISR-NEXT"}>
-          <h5> Github Repo</h5>
+          <button>Github Repo</button>
         </Link>
       </main>
     </div>

@@ -6,6 +6,7 @@ export function getStaticProps() {
     props: {
       time: new Date().toUTCString(),
     },
+    revalidate: 3600,
   };
 }
 
@@ -17,6 +18,7 @@ export default function challenge2({ time }: any) {
         <main className={styles.main}>
           <h1 className={styles.title}>Challenge 3</h1>
           <h3>On Demand ISR</h3>
+          <button> Get Time</button>
         </main>
 
         <NavigationButton
