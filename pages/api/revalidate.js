@@ -1,10 +1,9 @@
-export default async function getCurrentTime(res, req) {
-  console.log("hello");
-  let pass = false;
+export default async function handler(req, res) {
   try {
-    await res.unstable_revalidate("/feature/isg/challenge3");
-    pass = true;
-  } catch (error) {
-    console.log(error);
+    console.log("Revalidating");
+    await res.revalidate("/feature/isg/challenge3");
+    return res.json({ revalidated: true });
+  } catch (err) {
+    return res.status(500).send("Error revalidating");
   }
 }

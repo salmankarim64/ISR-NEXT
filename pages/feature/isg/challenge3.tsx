@@ -1,3 +1,5 @@
+import Router from "next/router";
+import { useState } from "react";
 import NavigationButton from "../../../components/NavigationButton";
 import styles from "../../../styles/Home.module.css";
 
@@ -6,11 +8,10 @@ export function getStaticProps() {
     props: {
       time: new Date().toUTCString(),
     },
-    revalidate: 3600,
   };
 }
 
-export default function challenge2({ time }: any) {
+export default function challenge3({ time }: any) {
   return (
     <>
       <div className={styles.container}>
@@ -20,9 +21,11 @@ export default function challenge2({ time }: any) {
 
           <h1>Current Time: {time}</h1>
           <h3>On Demand ISR</h3>
+
           <button
             onClick={() => {
               fetch("/api/revalidate");
+              Router.reload();
             }}
           >
             {" "}
