@@ -25,11 +25,11 @@ export default function challenge3({ time }: any) {
           <button
             onClick={() => {
               fetch("/api/revalidate");
-              Router.reload();
+              // Router.reload();
             }}
           >
             {" "}
-            Get Time
+            Update Time
           </button>
         </main>
 
